@@ -141,7 +141,11 @@ const UserCard: React.FC = () => {
             <div>
               <div className='user'>
                 <div className='user-avatar'>
-                  <img src='/assets/img/img2.jpg' alt='User Avatar' />
+                  <img
+                    className='imgAvatar'
+                    src={usercard?.avatar ? usercard?.avatar : 'https://res.cloudinary.com/dswj1rtvu/image/upload/v1727670619/no-image_vueuvs.avif'}
+                    alt='avatar'
+                  />
                 </div>
                 <div>
                   <div className='name'>
