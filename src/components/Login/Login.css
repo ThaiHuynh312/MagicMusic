@@ -1,5 +1,5 @@
-.tam{
-  position:fixed;
+.tam {
+  position: fixed;
   background-color: black;
   top: 0px;
   left: 0px;
@@ -37,9 +37,11 @@
   height: 45px;
 }
 
-img.logo {
+.logo {
   width: 50px;
   height: 50px;
+  z-index: 1000;
+  position: relative;
 }
 
 .titleLogin {
@@ -47,7 +49,8 @@ img.logo {
   font-size: 32px;
   color: #ffffff;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .contentLogin {
@@ -89,4 +92,3 @@ img.logo {
 .error-text {
   font-weight: 500;
 }
-

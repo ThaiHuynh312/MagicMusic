@@ -141,7 +141,7 @@ const UserCard: React.FC = () => {
             <div>
               <div className='user'>
                 <div className='user-avatar'>
-                  <img src='/src/assets/img/img2.jpg' alt='User Avatar' />
+                  <img src='/assets/img/img2.jpg' alt='User Avatar' />
                 </div>
                 <div>
                   <div className='name'>

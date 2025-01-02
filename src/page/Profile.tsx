@@ -108,7 +108,7 @@ const Profile = () => {
         <div className='profileAvatar'>
           <div>
             <div className='avatar'>
-              <img src='/src/assets/img/img2.jpg' alt='User Avatar' />
+              <img src='https://res.cloudinary.com/dswj1rtvu/image/upload/v1727670619/no-image_vueuvs.avif' alt='User Avatar' />
               <div className='camera'>
                 <CameraAltOutlined sx={{ width: '20px', color: 'var(--main-color)' }}></CameraAltOutlined>
               </div>

@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { VisibilityOutlined, VisibilityOffOutlined } from '@mui/icons-material'
 import './Login.css'
-import { apiLogin } from './Auth/LoginAPI.ts'
+import Logo from '../../assets/icon/Logo.svg?react'
+import { apiLogin } from '../../Auth/LoginAPI.ts'
 import { useNavigate } from 'react-router-dom'
 import { Button, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput, TextField } from '@mui/material'
 import { toast } from 'react-toastify'
@@ -62,12 +63,9 @@ const Login: React.FC = () => {
     <div className='tam'>
       <div className='body'>
         <div className='wp'>
-          <div>
-            <img src='src/assets/img/IMG_Login.jpg' alt='' />
-          </div>
           <div className='bgLogin'>
             <div className='logoLogin'>
-              <img className='logo' src='src/assets/img/Logo.png' alt='' />
+              <Logo className='logo'/>
             </div>
             <div className='titleLogin'>Log in to Magic Music</div>
 

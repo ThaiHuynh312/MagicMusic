@@ -1,13 +1,14 @@
 import { AudiotrackRounded, PersonOutlineOutlined, ReportGmailerrorredRounded, SpaceDashboardOutlined } from '@mui/icons-material'
 import './SideBar.css'
+import Logo from '../../assets/icon/Logo.svg?react'
 import { NavLink } from 'react-router-dom'
 
 const SlideBar = () => {
   return (
     <div className='slidebar'>
-      <div className='logo'>
+      <div className='logo' style={{ marginBottom: '40px' }}>
         <NavLink to='/' className='nav-link'>
-          <img className='logo' src='../src/assets/img/Logo.png' alt='Logo' />
+          <Logo className='logo' style={{ width: '40px' }} />
         </NavLink>
       </div>
       <ul className='slidebar-menu'>
