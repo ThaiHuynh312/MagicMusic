@@ -93,6 +93,8 @@ const DetailTrackReport = () => {
   const [listReport, setListReport] = useState<ITrackReport[]>([])
   const [infoTrack, setInfoTrack] = useState<ITrackInfo>()
   const [status, setStatus] = useState<number>(1)
+  const [CheckStatus, setCheckStatus] = useState<number>(0)
+  const [check, setCheck] = useState<boolean>(false)
   const [search, setSearch] = useState('')
   const [totalReport, setTotalReport] = useState(0)
   const navigate = useNavigate()
@@ -129,6 +131,8 @@ const DetailTrackReport = () => {
       }
       setInfoTrack(response.result)
       setStatus(response.result.status === 'active' ? 0 : 1)
+      setCheckStatus(response.result.status === 'active' ? 0 : 1)
+      setCheck(response.result.status === 'active' ? false : true)
     } catch (error) {
       // eslint-disable-next-line no-console
       console.error('Error fetching users:', error)
@@ -178,6 +182,10 @@ const DetailTrackReport = () => {
 
   const handleUpdateTrack = async (): Promise<void> => {
     handleCloseAlert()
+    if (status === CheckStatus) {
+      toast.error('Please change the track status.')
+      return
+    }
     try {
       setLoading(true)
 
@@ -253,6 +261,7 @@ const DetailTrackReport = () => {
                 </div>
               </div>
               <Button
+                disabled={check}
                 variant='contained'
                 onClick={handleClickOpenAlert}
                 sx={{
