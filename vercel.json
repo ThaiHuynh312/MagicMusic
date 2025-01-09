@@ -1,8 +1,9 @@
 {
   "redirects": [
     {
-      "source": "/(.*)",
-      "destination": "https://github.com/ThaiHuynh312/MagicMusic"
+      "source": "/((?!login).*)",
+      "destination": "/",
+      "permanent": false
     }
   ]
 }
